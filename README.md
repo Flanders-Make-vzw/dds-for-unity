@@ -1,11 +1,3 @@
-**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
-
-When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
-
-*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our video](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the video in a new tab to avoid leaving Bitbucket.*
-
----
-
 ## Edit a file
 
 You’ll start by editing this README file to learn how to edit a file in Bitbucket.
@@ -19,15 +11,22 @@ You’ll start by editing this README file to learn how to edit a file in Bitbuc
 
 ---
 
-## Create a file
+## How to Start
 
-Next, you’ll add a new file to this repository.
+First is to install Vortex DDS. #todo 
 
-1. Click the **New file** button at the top of the **Source** page.
-2. Give the file a filename of **contributors.txt**.
-3. Enter your name in the empty file space.
-4. Click **Commit** and then **Commit** again in the dialog.
-5. Go back to the **Source** page.
+
+This you have to do load the DDS functionality.
+
+1. Generate a new Unity project in Unity Hub. Choose a 2019 version, for the exercise 2019.4.29f is used.
+2. When the  project is opened go to Assets -> Import Package -> Custom Package .. 
+3. Select the package DDSforUnity.2019.unitypackage and click **Open**
+4. A dialog window with all the contents of the package pops up, select all files (if not already) and click **Import**.
+5. The package is loaded and as a result the folder DDS is created under the Assets folder.
+6. In the menu bar als the option DDS appears. Click DDS --> Vortex and a window will appear called DefineDDS.
+7. Here you must fill in the OSPL Home Directory and the OSPL Config file. This information will be used to build a bat-file that automatically starts the built app with DDS-support.
+8. Also the Editor must be re-started with DDS support. #TODO: GENERATE A FILE FOR THIS TOO.
+9. Restart the Editor 
 
 Before you move on, go ahead and explore the repository. You've already seen the **Source** page, but check out the **Commits**, **Branches**, and **Settings** pages.
 
