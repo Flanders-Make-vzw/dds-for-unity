@@ -13,8 +13,23 @@ You’ll start by editing this README file to learn how to edit a file in Bitbuc
 
 ## How to Start
 
-First is to install Vortex DDS. #todo 
+First is to install Vortex DDS [Vortex OpenSplice Community Edition](https://github.com/ADLINK-IST/opensplice). Vortex OpenSplice is a full implementation of the OMG DDS Standard licensed under Apache 2. 
 
+### Firewall ###
+If you have a Windows computer in your network than by default the UPD ports 7400 to 7500 are blocked. These are the ports used by DDS so you want to open them. In Windows 10 open "Windows Defender Firewall with Advanced Security" and add an inbound and an outbound rule to open those ports.
+
+This bat file is generated (explain)
+```bat
+@echo off
+echo Setting paths for Vortex OpenSplice ..
+if "%SPLICE_ORB%"=="" set SPLICE_ORB=DDS_OpenFusion_1_6_1
+set OSPL_HOME=<<UPDATE THE DIRECTORY>>\HDE\x86_64.win64
+set PATH=%OSPL_HOME%\bin;%OSPL_HOME%\lib;%PATH%
+set OSPL_TMPL_PATH=%OSPL_HOME%\etc\idlpp
+if "%OSPL_URI%"=="" set OSPL_URI=file://%OSPL_HOME%\etc\config\ospl_sp_ddsi_1gbps.xml
+echo Starting MotorCase REBA scorer: Unity exe ..
+"<<UPDATE THE DIRECTORY>>\UnityRebaScorer\MotorCaseRebaScorer.exe"
+```
 
 This you have to do load the DDS functionality.
 
