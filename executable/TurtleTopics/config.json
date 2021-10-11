@@ -1,0 +1,10 @@
+{ "VelocitySubscriber" : "rt/turtle2/cmd_vel",
+  "PosePublisher" : "rt/turtle2/pose",
+  "EatSubscriber" : "rt/turtle2/eat",
+  "DieSubscriber" : "rt/turtle2/die",
+  "AttackSubscriber" : "rt/turtle2/attack",
+  "HeadCamPublisher" : {
+	  "Topic": "rt/turtle2/headcam", 
+	  "jpegcomp" : 45 }
+}
+
