@@ -1,45 +1,29 @@
-**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
+## TurtleTopics Executable
 
-When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
+This is an executable for Windows 10 which contains a publisher (Pose and Compressed Jpeg-stream) and some subscribers to communicate with ROS2. 
+This application contains some of the functionality of the famous [TurtleSim](https://docs.ros.org/en/foxy/Tutorials/Turtlesim/Introducing-Turtlesim.html) and also some more. 
+Basically this is a TurtleSim version with a 3D-look to showcase some of its capabilities. The source-code uses some commercial Unity assets, which prohibits me from providing the source-code of the application. 
+Only ROS2-topics are supported right now and not yet services. 
 
-*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our video](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the video in a new tab to avoid leaving Bitbucket.*
 
----
-
-## Edit a file
-
-You’ll start by editing this README file to learn how to edit a file in Bitbucket.
-
-1. Click **Source** on the left side.
-2. Click the README.md link from the list of files.
-3. Click the **Edit** button.
-4. Delete the following text: *Delete this line to make a change to the README from Bitbucket.*
-5. After making your change, click **Commit** and then **Commit** again in the dialog. The commit page will open and you’ll see the change you just made.
-6. Go back to the **Source** page.
 
 ---
 
-## Create a file
+## Howto get things started
 
-Next, you’ll add a new file to this repository.
+You will need to have the following installed.
 
-1. Click the **New file** button at the top of the **Source** page.
-2. Give the file a filename of **contributors.txt**.
-3. Enter your name in the empty file space.
-4. Click **Commit** and then **Commit** again in the dialog.
-5. Go back to the **Source** page.
+1. Vortex DDS 
+2. The application (this directory from the git-repo)
+3. ROS2 in your network (or in my case in a Virtual Machine running Ubuntu with ROS2 on the same computer)
 
-Before you move on, go ahead and explore the repository. You've already seen the **Source** page, but check out the **Commits**, **Branches**, and **Settings** pages.
 
 ---
 
-## Clone a repository
+## Running ROS2 
 
-Use these steps to clone from SourceTree, our client for using the repository command-line free. Cloning allows you to work on your files locally. If you don't yet have SourceTree, [download and install first](https://www.sourcetreeapp.com/). If you prefer to clone from the command line, see [Clone a repository](https://confluence.atlassian.com/x/4whODQ).
+Like the ROS2 turtlesim you can give commands in ROS2 (any version should be fine, tested it with **galactic**).
 
-1. You’ll see the clone button under the **Source** heading. Click that button.
-2. Now click **Check out in SourceTree**. You may need to create a SourceTree account or log in.
-3. When you see the **Clone New** dialog in SourceTree, update the destination path and name if you’d like to and then click **Clone**.
-4. Open the directory you just created to see your repository’s files.
 
-Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
+```ros2 topic pub /turtle2/cmd_vel geometry_msgs/msg/Twist {"linear: { x: 1, y: 0, z: 0}, angular:  { x: 0, y: 0, z: 1 } "} ```
+
