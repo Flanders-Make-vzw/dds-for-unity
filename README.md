@@ -21,13 +21,28 @@ This you have to do load the DDS functionality.
 ![Set Vortex DDS settings in Unity](https://bitbucket.org/edhage/dds-for-unity/downloads/define_dds_window.png)
 
 7. Here you must fill in the OSPL Home Directory and the OSPL Config file. This information will be used to build a bat-file that automatically starts the built app with DDS-support.
-8. Some dll-s have been loaded which only take effect if the Editor is re-started. 
+8. Some dll-s have been loaded which only take effect if the Editor is re-started. First make this bat-file.
+
+You probably do not only want to be able to develop programs with DDS, you also want to test them in the Editor. To do this fist make a bat-file and store it in the project directory root.
+
+```
+@echo off
+echo Setting paths for Vortex OpenSplice ..
+if "%SPLICE_ORB%"=="" set SPLICE_ORB=DDS_OpenFusion_1_6_1
+set OSPL_HOME=D:\HDE\x86_64.win64
+set PATH=%OSPL_HOME%\bin;%OSPL_HOME%\lib;%OSPL_HOME%\examples\lib;%PATH%
+set OSPL_TMPL_PATH=%OSPL_HOME%\etc\idlpp
+if "%OSPL_URI%"=="" set OSPL_URI=file://%OSPL_HOME%\etc\config\ospl_vm.xml
+echo Starting Unity ..
+"C:\Program Files\Unity\Hub\Editor\2019.4.29f1\Editor\Unity.exe" -projectPath "D:\Unity_projects\TurtleROS2"
+```
+
+This is an example, what you typically want to change is the OSPL_HOME directory and on the last line change the Unity.exe to the location where you have stored Unity.exe. The projectPath specified should be your project root.
+
+8. Restart the Editor using the bat-file.
 
 
-8. Restart the Editor. Some dll-s have been loaded which only take effect if the Editor is re-started. 
-
-
-
+(So a similar bat-file will be generated automatically if you compile the code. For now this file, to start the Editor with DDS-support, needs to be created by hand).
 
 
 ---
