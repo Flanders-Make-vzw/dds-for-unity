@@ -1,35 +1,10 @@
-## Edit a file
+## Source and Unity-package
 
-You’ll start by editing this README file to learn how to edit a file in Bitbucket.
+The source-code is found in the src/Assets/DDS-directory. The DDS-directory could be directly copied in the Assets-folder in your Unity3D-project, or more conveniently, you can load the Unity-package in the unity-package directory.
 
-1. Click **Source** on the left side.
-2. Click the README.md link from the list of files.
-3. Click the **Edit** button.
-4. Delete the following text: *Delete this line to make a change to the README from Bitbucket.*
-5. After making your change, click **Commit** and then **Commit** again in the dialog. The commit page will open and you’ll see the change you just made.
-6. Go back to the **Source** page.
+The package consists of wrappers around the common ROS-topics and some functions to make the use in Unity3D more convenient. This package is made for Unity 2019, and should also work for version 2017 or 2018. I have tried it in version 2020 and it does not work. The dll-s give me trouble, so I have to look into this.
 
----
-
-## How to Start
-
-First is to install Vortex DDS [Vortex OpenSplice Community Edition](https://github.com/ADLINK-IST/opensplice). Vortex OpenSplice is a full implementation of the OMG DDS Standard licensed under Apache 2. 
-
-### Firewall ###
-If you have a Windows computer in your network than by default the UPD ports 7400 to 7500 are blocked. These are the ports used by DDS so you want to open them. In Windows 10 open "Windows Defender Firewall with Advanced Security" and add an inbound and an outbound rule to open those ports.
-
-This bat file is generated (explain)
-```bat
-@echo off
-echo Setting paths for Vortex OpenSplice ..
-if "%SPLICE_ORB%"=="" set SPLICE_ORB=DDS_OpenFusion_1_6_1
-set OSPL_HOME=<<UPDATE THE DIRECTORY>>\HDE\x86_64.win64
-set PATH=%OSPL_HOME%\bin;%OSPL_HOME%\lib;%PATH%
-set OSPL_TMPL_PATH=%OSPL_HOME%\etc\idlpp
-if "%OSPL_URI%"=="" set OSPL_URI=file://%OSPL_HOME%\etc\config\ospl_sp_ddsi_1gbps.xml
-echo Starting MotorCase REBA scorer: Unity exe ..
-"<<UPDATE THE DIRECTORY>>\UnityRebaScorer\MotorCaseRebaScorer.exe"
-```
+## Installation using the Unity-package
 
 This you have to do load the DDS functionality.
 
@@ -37,23 +12,35 @@ This you have to do load the DDS functionality.
 2. When the  project is opened go to Assets -> Import Package -> Custom Package .. 
 3. Select the package DDSforUnity.2019.unitypackage and click **Open**
 4. A dialog window with all the contents of the package pops up, select all files (if not already) and click **Import**.
+
+![Import Unity package](https://bitbucket.org/edhage/dds-for-unity/downloads/window_import_DDS_for_unity.png)!
+
 5. The package is loaded and as a result the folder DDS is created under the Assets folder.
 6. In the menu bar als the option DDS appears. Click DDS --> Vortex and a window will appear called DefineDDS.
-7. Here you must fill in the OSPL Home Directory and the OSPL Config file. This information will be used to build a bat-file that automatically starts the built app with DDS-support.
-8. Also the Editor must be re-started with DDS support. #TODO: GENERATE A FILE FOR THIS TOO.
-9. Restart the Editor 
 
-Before you move on, go ahead and explore the repository. You've already seen the **Source** page, but check out the **Commits**, **Branches**, and **Settings** pages.
+![Set Vortex DDS settings in Unity](https://bitbucket.org/edhage/dds-for-unity/downloads/define_dds_window.png)
+
+7. Here you must fill in the OSPL Home Directory and the OSPL Config file. This information will be used to build a bat-file that automatically starts the built app with DDS-support.
+8. Some dll-s have been loaded which only take effect if the Editor is re-started. 
+
+
+8. Restart the Editor. Some dll-s have been loaded which only take effect if the Editor is re-started. 
+
+
+
+
 
 ---
 
-## Clone a repository
+## Prerequisites
 
-Use these steps to clone from SourceTree, our client for using the repository command-line free. Cloning allows you to work on your files locally. If you don't yet have SourceTree, [download and install first](https://www.sourcetreeapp.com/). If you prefer to clone from the command line, see [Clone a repository](https://confluence.atlassian.com/x/4whODQ).
+### Install Vortex DDS
 
-1. You’ll see the clone button under the **Source** heading. Click that button.
-2. Now click **Check out in SourceTree**. You may need to create a SourceTree account or log in.
-3. When you see the **Clone New** dialog in SourceTree, update the destination path and name if you’d like to and then click **Clone**.
-4. Open the directory you just created to see your repository’s files.
+First is to install Vortex DDS [Vortex OpenSplice Community Edition](https://github.com/ADLINK-IST/opensplice). Vortex OpenSplice is a full implementation of the OMG DDS Standard licensed under Apache 2. 
 
-Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
+### Firewall ###
+If you have a Windows computer in your network than by default the UPD ports 7400 to 7500 are blocked. These are the ports used by DDS so you want to open them. In Windows 10 open "Windows Defender Firewall with Advanced Security" and add an inbound and an outbound rule to open those ports.
+
+---
+
+
