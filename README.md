@@ -12,7 +12,7 @@ The package consists of wrappers around the common ROS-topics and some functions
 
 ## Flanders Make
 This software has been developed by Edward Hage ([Confirmat](https://www.confirmat.nl)). Some parts are developed in assignment for [Flanders Make](https://www.flandersmake.be/). Flanders Make offer active support to companies in the manufacturing industry to develop and optimise products and production processes. This is based on high-tech research.
-Flanders Make is an initiative supported by the Flemish Government, the Limburg Fund and the ERDF. Some other parts are developed for other customers of Confirmat.
+Flanders Make is an initiative supported by the Flemish Government, the Limburg Fund and the ERDF.
 
 ## Installation using the Unity-package
 
