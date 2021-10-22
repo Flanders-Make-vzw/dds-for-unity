@@ -62,6 +62,8 @@ This is an example, what you typically want to change is the OSPL_HOME directory
 
 First is to install Vortex DDS [Vortex OpenSplice Community Edition](https://github.com/ADLINK-IST/opensplice). Vortex OpenSplice is a full implementation of the OMG DDS Standard licensed under Apache 2. 
 
+In the Vortex directory you will find a Windows installer and a Raspberry Pi installer, alternatively they can be downloaded from the ADLINK website. These installers are binaries, which is more convenient than building the OpenSplice yourself.
+
 ### Firewall ###
 If you have a Windows computer in your network than by default the UPD ports 7400 to 7500 are blocked. These are the ports used by DDS so you want to open them. In Windows 10 open "Windows Defender Firewall with Advanced Security" and add an inbound and an outbound rule to open those ports.
 
