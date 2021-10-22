@@ -11,8 +11,8 @@ The source-code is found in the src/Assets/DDS-directory. The DDS-directory coul
 The package consists of wrappers around the common ROS-topics and some functions to make the use in Unity3D more convenient. This package is made for Unity 2019, and should also work for version 2017 or 2018. I have tried it in version 2020 and it does not work. The dll-s give me trouble, so I have to look into this.
 
 ## Flanders Make
-This software has been developed by Edward Hage. Some parts are developed in assignment for [Flanders Make](https://www.flandersmake.be/). Flanders Make offer active support to companies in the manufacturing industry to develop and optimise products and production processes. This is based on high-tech research.
-Flanders Make is an initiative supported by the Flemish Government, the Limburg Fund and the ERDF.
+This software has been developed by Edward Hage ([Confirmat](https://www.confirmat.nl)). Some parts are developed in assignment for [Flanders Make](https://www.flandersmake.be/). Flanders Make offer active support to companies in the manufacturing industry to develop and optimise products and production processes. This is based on high-tech research.
+Flanders Make is an initiative supported by the Flemish Government, the Limburg Fund and the ERDF. Some other parts are developed for other customers of Confirmat.
 
 ## Installation using the Unity-package
 
