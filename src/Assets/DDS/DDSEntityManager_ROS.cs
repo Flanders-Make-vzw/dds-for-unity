@@ -1,29 +1,27 @@
-/*
- *                         Vortex OpenSplice
- *
- *   This software and documentation are Copyright 2006 to  ADLINK
- *   Technology Limited, its affiliated companies and licensors. All rights
- *   reserved.
- *
- *   Licensed under the Apache License, Version 2.0 (the "License");
- *   you may not use this file except in compliance with the License.
- *   You may obtain a copy of the License at
- *
- *       http://www.apache.org/licenses/LICENSE-2.0
- *
- *   Unless required by applicable law or agreed to in writing, software
- *   distributed under the License is distributed on an "AS IS" BASIS,
- *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *   See the License for the specific language governing permissions and
- *   limitations under the License.
- *   
- *   EDWARD HAGE 9 AUG 2019 - Added "ROS" profile.
- *   EDWARD HAGE 5 JULI 2020 - Added "ROS_BE" profile , BE = best effort
- *   TO DO: Rework this file for different 'Qos_settings', maybe profiles same as the pre-defined profiles in ROS2.
- */
+/* 
+ Copyright 2006 ADLINK Technology Limited, its affiliated companies and licensors. All rights reserved.
+ Copyright 2019-2021 Edward Hage
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+Alterations Edward Hage:
+	9 AUG 2019 - Added "ROS" profile.
+	5 JULI 2020 - Added "ROS_BE" profile , BE = best effort
+	29 SEPT 2021 - Encoding using System.Text nd addes "ROSSERVICE" profile (under construction still)
+*/
 
 using System;
-using System.Text; // for encoding 29-9-2021 edward
+using System.Text; 
 using System.Threading;
 
 using DDS;
