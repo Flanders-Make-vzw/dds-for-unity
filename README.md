@@ -70,5 +70,5 @@ If you have a Windows computer in your network than by default the UPD ports 740
 
 ---
 ## Call for Support
-Flanders Make is interested to know if you find this software usefull. Please contact Flanders Make at info@flandersmake.be with your usecase. 
+Flanders Make is interested to know if you find this software useful. Please contact Flanders Make at info@flandersmake.be with your usecase. 
 
